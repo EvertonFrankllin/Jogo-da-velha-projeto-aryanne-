@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="icon" type="image/png" href="../jogo da velha.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game">
+        <h1>Jogo da Velha</h1>
+        <div id="choice">
+            <h2>Escolha X ou O</h2>
+            <button onclick="chooseSymbol('X')">X</button>
+            <button onclick="chooseSymbol('O')">O</button>
+        </div>
+        <div id="status"></div>
+        <div id="board">
+            <div class="cell" id="cell-0" onclick="makeMove(0)"></div>
+            <div class="cell" id="cell-1" onclick="makeMove(1)"></div>
+            <div class="cell" id="cell-2" onclick="makeMove(2)"></div>
+            <div class="cell" id="cell-3" onclick="makeMove(3)"></div>
+            <div class="cell" id="cell-4" onclick="makeMove(4)"></div>
+            <div class="cell" id="cell-5" onclick="makeMove(5)"></div>
+            <div class="cell" id="cell-6" onclick="makeMove(6)"></div>
+            <div class="cell" id="cell-7" onclick="makeMove(7)"></div>
+            <div class="cell" id="cell-8" onclick="makeMove(8)"></div>
+        </div>
+        <div id="score">Aryanne: 0 | Máquina: 0</div>
+        <button onclick="resetBoard()">Reiniciar</button>
+    </div>
+    
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
