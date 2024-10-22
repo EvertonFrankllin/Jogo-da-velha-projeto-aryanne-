@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #e0e0e0;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#choice {
+    margin-bottom: 20px;
+}
+
+#status {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#score {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+
+/* Estilização para telas pequenas */
+@media (max-width: 450px) {
+    .cell {
+        font-size: 36px; /* Tamanho da fonte menor para telas pequenas */
+        height: 80px; /* Altura menor */
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px; /* Fonte menor para botões */
+    }
+
+    #status, #score {
+        font-size: 16px; /* Fonte menor para status e pontuação */
+    }
+}
+
+/* Adicionando um delay visual para a jogada da IA */
+.cell.ai-move {
+    animation: aiMoveDelay 1s;
+}
+
+@keyframes aiMoveDelay {
+    from {
+        background-color: #e0e0e0;
+    }
+    to {
+        background-color: #ffeb3b;
+    }
+}
+
